@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
+import { getAssetPath } from "@/lib/basePath";
 
 export function Navbar() {
   return (
@@ -21,7 +22,7 @@ export function Navbar() {
           </div>
 
           <Link href="/" className="relative w-[85px] h-[85px] flex items-center justify-center z-10">
-            <Image src="/logo-agap2it.png" alt="Logo agap2IT" fill className="object-contain" />
+            <Image src={getAssetPath("/logo-agap2it.png")} alt="Logo agap2IT" fill className="object-contain" />
           </Link>
         </div>
 

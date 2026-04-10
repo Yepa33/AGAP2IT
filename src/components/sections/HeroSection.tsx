@@ -2,6 +2,7 @@
 
 import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
+import { getAssetPath } from "@/lib/basePath";
 
 export function HeroSection() {
   return (
@@ -65,7 +66,7 @@ export function HeroSection() {
         {/* RIGHT COLUMN SPARTAN (Shifted further left and ensure it's on top of squares) */}
         <div className="absolute min-h-[90vh] w-[42vw] right-[2vw] bottom-[-12vh] flex justify-center items-end hidden md:flex z-20 pointer-events-none">
           <Image
-            src="/spartiate-home-on-compressed.webp"
+            src={getAssetPath("/spartiate-home-on-compressed.webp")}
             alt="Spartan Warrior"
             fill
             className="object-contain object-bottom animate-[float_6s_ease-in-out_infinite]"

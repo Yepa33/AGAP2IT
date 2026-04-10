@@ -3,6 +3,7 @@
 import Image from "next/image";
 import { ArrowDownRight } from "lucide-react";
 import { cn } from "@/lib/utils";
+import { getAssetPath } from "@/lib/basePath";
 
 interface StatBoxProps {
   label: string;
@@ -90,7 +91,7 @@ export function StatsSection() {
           <div className="absolute top-[-65%] right-[-20%] lg:right-[-20%] z-0 pointer-events-none opacity-90 hidden lg:block">
             <div className="relative h-[950px] w-[950px]">
               <Image
-                src="/bouclier-on-compressed.webp"
+                src={getAssetPath("/bouclier-on-compressed.webp")}
                 alt="Cyber-Shield"
                 fill
                 className="object-contain animate-[float_12s_ease-in-out_infinite]"
