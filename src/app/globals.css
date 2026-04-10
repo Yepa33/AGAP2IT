@@ -1,26 +1,162 @@
 @import "tailwindcss";
 
+@theme {
+  --color-bg-main: #060515; /* Very slightly brighter dark blue to avoid flat black */
+  --color-bg-secondary: #000000;
+  --color-bg-tertiary: #1322ab; /* The exact blue background of 'Nos Quêtes' */
+  --color-accent-primary: #2741ff; /* Bright vivid blue for glows / borders */
+  --color-accent-primary-dark: #0022ff; /* Deep solid blue for card backgrounds */
+  --color-accent-secondary: #ffcc00; /* Distinct exact Gold/Yellow */
+  
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif;
+  --font-heading: var(--font-rajdhani), ui-sans-serif, system-ui, sans-serif;
+  
+  --animate-float: float 6s ease-in-out infinite;
+}
+
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  background-color: var(--color-bg-main);
+  color: white;
+}
+/* Scrollbar Customization */
+* {
+  scrollbar-color: #ffcc00 transparent;
+  scrollbar-width: thin;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: transparent;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #ffcc00;
+  border-radius: 10px;
+  border: 2px solid #060515; /* matches bg to create a floating pill illusion */
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background-color: #ffdb4d;
+}
+
+/* Custom Cyberpunk Utilities */
+@layer utilities {
+  .cyber-clip {
+    clip-path: polygon(15px 0, 100% 0, 100% 100%, 0 100%, 0 15px);
+  }
+  .cyber-clip-tr {
+    clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 0 100%);
+  }
+  .cyber-clip-br {
+    clip-path: polygon(0 0, 100% 0, 100% calc(100% - 15px), calc(100% - 15px) 100%, 0 100%);
+  }
+  .neon-border {
+    border: 1px solid var(--color-accent-primary);
+    box-shadow: 0 0 10px rgba(0, 194, 255, 0.3), inset 0 0 10px rgba(0, 194, 255, 0.1);
+  }
+  .neon-text-gold {
+    text-shadow: 0 0 10px rgba(247, 198, 0, 0.4);
+  }
+  .neon-text-blue {
+    text-shadow: 0 0 10px rgba(0, 194, 255, 0.5);
+  }
+  .glass-panel {
+    background: rgba(10, 14, 41, 0.6);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* Scattered Pixels Pattern */
+.pixel-bg {
+  position: absolute;
+  inset: 0;
+  z-index: -1;
+  background-size: 60px 60px;
+  background-image: 
+    linear-gradient(to right, rgba(30, 43, 246, 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(30, 43, 246, 0.05) 1px, transparent 1px);
+  mask-image: radial-gradient(circle at center, black, transparent 80%);
 }
+
+/* CYBER: Pure Diagonal Cut Corners */
+.cyber-card-tr-bl {
+  clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 25px 100%, 0 calc(100% - 25px));
+}
+.cyber-card-tr-bl-inner {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 24px 100%, 0 calc(100% - 24px));
+}
+.cyber-card-tl-br {
+  clip-path: polygon(25px 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%, 0 25px);
+}
+.cyber-card-tr {
+  clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+}
+.cyber-card-bl {
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 25px 100%, 0 calc(100% - 25px));
+}
+.cyber-card-tl {
+  clip-path: polygon(25px 0, 100% 0, 100% 100%, 0 100%, 0 25px);
+}
+.cyber-card-tr {
+  clip-path: polygon(0 0, calc(100% - 25px) 0, 100% 25px, 100% 100%, 0 100%);
+}
+.cyber-card-tr-inner {
+  clip-path: polygon(0 0, calc(100% - 24px) 0, 100% 24px, 100% 100%, 0 100%);
+}
+.cyber-card-br {
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 25px), calc(100% - 25px) 100%, 0 100%);
+}
+.cyber-card-candidature {
+  clip-path: polygon(35px 0, 100% 0, 100% 100%, 0 100%, 0 35px);
+}
+.cyber-card-candidature-inner {
+  clip-path: polygon(33px 0, 100% 0, 100% 100%, 0 100%, 0 33px);
+}
+
+.cyber-dr-outer {
+  /* clip-path: polygon(0 0, calc(100% - 50px) 0, 100% 50px, 100% 100%, 0 100%); */
+}
+.cyber-dr-mid {
+  /* clip-path: polygon(0 0, calc(100% - 47px) 0, 100% 47px, 100% 100%, 0 100%); */
+}
+.cyber-dr-inner {
+  /* clip-path: polygon(0 0, calc(100% - 37px) 0, 100% 37px, 100% 100%, 0 100%); */
+}
+
+
+/* Animations */
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+@keyframes organic-pixel {
+  0%, 100% {
+    opacity: 0;
+    background-color: #0c1a8e;
+  }
+  30%, 70% {
+    opacity: 0.8;
+  }
+  50% {
+    opacity: 1;
+    background-color: #2741ff;
+  }
+}
+.animate-organic {
+  animation-name: organic-pixel;
+  animation-timing-function: ease-in-out;
+  animation-iteration-count: infinite;
+}
+
