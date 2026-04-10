@@ -119,7 +119,7 @@ export function TeamSection() {
 
           <div className="flex flex-col items-center">
             <p className="text-white text-[16.5px] leading-[1.8] font-sans opacity-95 max-w-3xl">
-              Pour moi, je trouve que le métier d’ingénieur d’affaires chez Agap2IT est très valorisant. 
+              Pour moi, le métier d’ingénieur d’affaires chez Agap2IT est très valorisant. 
               Il répond parfaitement à ce que je recherche : du challenge, de la stimulation, être entouré 
               de personnes inspirantes et avoir des responsabilités. Ces critères sont mes moteurs, 
               c’est pourquoi je suis très motivé pour rejoindre Agap2IT.
@@ -219,7 +219,7 @@ export function TeamSection() {
                         <ul className="list-none space-y-4 text-white/80 text-[12.5px] leading-[1.65] font-sans">
                           <li className="flex items-start gap-4">
                             <span className="text-[#ffcc00] mt-[0.6em] text-[10px] flex-shrink-0">●</span>
-                            <span><span className="text-white font-medium">Passage en senior :</span> je ne suis plus junior, je maîtrise l’ensemble des éléments qui me conduisent à ma réussite. L’objectif reste le même : faire croître mon business et pérenniser une relation de confiance avec mon équipe.</span>
+                            <span><span className="text-white font-medium">Passage en senior :</span> je maîtrise l’ensemble des éléments qui me conduisent à ma réussite. L’objectif reste le même : faire croître mon business et pérenniser une relation de confiance avec mon équipe.</span>
                           </li>
                           <li className="flex items-start gap-4">
                             <span className="text-[#ffcc00] mt-[0.6em] text-[10px] flex-shrink-0">●</span>
