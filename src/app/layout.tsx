@@ -15,7 +15,7 @@ const rajdhani = Rajdhani({
 });
 
 export const metadata: Metadata = {
-  title: "AGAP2IT | Quel que soit le défi, nous sommes prêts",
+  title: "Agap2IT | Maxime MUSELLEC",
   description: "IT for Business & Collaborateur Centrique",
 };
 
