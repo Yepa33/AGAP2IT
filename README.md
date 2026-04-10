@@ -29,8 +29,23 @@ To learn more about Next.js, take a look at the following resources:
 
 You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## Deploy on Vercel
+## Deployment
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+### 🚀 Deploying to GitHub Pages
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. **Push your code** to the `main` branch of your GitHub repository.
+2. Go to your repository **Settings** > **Pages**.
+3. Under **Build and deployment** > **Source**, select **GitHub Actions**.
+4. The site will automatically build and deploy via the workflow in `.github/workflows/deploy.yml`.
+
+> [!NOTE]
+> If your site is a project page (e.g., `username.github.io/repo-name/`) rather than a user page, you may need to uncomment the `basePath` lines in `next.config.ts`.
+
+### 🌐 Deploying to Render
+
+1. Create a new **Static Site** on [Render](https://dashboard.render.com).
+2. Connect your GitHub repository.
+3. Use the following settings:
+   - **Build Command**: `npm install && npm run build`
+   - **Publish Directory**: `out`
+4. Click **Create Static Site**.
