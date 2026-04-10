@@ -17,6 +17,10 @@ const rajdhani = Rajdhani({
 export const metadata: Metadata = {
   title: "Agap2IT | Maxime MUSELLEC",
   description: "IT for Business & Collaborateur Centrique",
+  icons: {
+    icon: "/favicon.png",
+    apple: "/favicon.png",
+  },
 };
 
 export default function RootLayout({
