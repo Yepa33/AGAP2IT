@@ -62,7 +62,7 @@ export function ApproachSection() {
                  <p>
                    Agap2 n’est pas qu’une simple ESN, c’est une communauté de 4 500 passionnés répartis en Europe. <br className="hidden md:block" />
                    Ce qui vous distingue ? Votre capacité à allier la force d'un grand groupe à l'agilité d'une start-up. 
-                   Chez agap2IT, Vous formez une unité de 900 consultants (dont 300 en France) dédiée exclusivement 
+                   Chez agap2IT, vous formez une unité de 900 consultants (dont 300 en France) dédiée exclusivement 
                    aux défis technologiques de demain.
                  </p>
                </div>

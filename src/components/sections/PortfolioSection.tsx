@@ -202,7 +202,7 @@ export function PortfolioSection() {
                <div className="flex flex-col gap-6">
                  <p className="text-[16px] leading-[1.6] opacity-90 font-light">
                    Le marché bordelais est stable et fidèle. Votre activité est portée par des comptes emblématiques comme 
-                   <span className="text-white font-bold"> Dassault</span> (16 consultants), 
+                   <span className="text-white font-bold"> Dassault</span> (16 consultants sur les 40), 
                    <span className="text-white font-bold"> TotalEnergies</span>, 
                    <span className="text-white font-bold"> le Crédit Agricole</span> ou 
                    <span className="text-white font-bold"> Orange</span>.
